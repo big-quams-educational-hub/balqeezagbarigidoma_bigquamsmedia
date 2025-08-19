@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Balqeez</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffc1e3, #ff99cc);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      height: 100vh;
+    }
+
+    /* Floating balloons animation */
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-150px) translateX(50px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+    .balloon {
+      position: absolute;
+      bottom: -100px;
+      width: 40px;
+      height: 55px;
+      background: #ff69b4;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: floatUp 8s ease-in infinite;
+      opacity: 0.7;
+      filter: drop-shadow(0 0 4px #ff1493);
+    }
+    .balloon:nth-child(1) {
+      left: 20%;
+      animation-delay: 0s; background: #ff69b4;
+    }
+    .balloon:nth-child(2) {
+      left: 40%;
+      animation-delay: 2.5s;
+      background: #ff85c1;
+    }
+    .balloon:nth-child(3) {
+      left: 60%;
+      animation-delay: 1.2s;
+      background: #ffb6c1;
+    }
+    .balloon:nth-child(4) {
+      left: 80%;
+      animation-delay: 3.8s;
+      background: #ffa6c9;
+    }
+
+    .container {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+      position: relative;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+      height: auto;
+      margin-top: 30px;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px auto;
+      border: 4px solid #ff69b4;
+      box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+      display: block;
+    }     .header {
+      font-size: 2.5em;
+      color: #d1477b;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+    .sub-header {
+      font-size: 1.3em;
+      color: #7a2f4b;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    .image {
+      border-radius: 12px;
+      max-width: 300px;
+      height: auto;
+      margin-top: 20px;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.6);
+    }
+    .message {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin: 30px 0;
+      color: #5a1a45;
+      font-weight: 500;
+    }
+    .footer {
+      font-style: italic;
+      font-size: 0.95em;
+      color: #8a3c68;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      background-color: #25D366;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.5);
+      transition: background-color 0.3s ease;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe57;
+    }
+    .created {
+      font-size: 0.9em;
+      margin-top: 40px;
+      color: #bb6ca8;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+<!-- Floating Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <div class="container">
+    <img class="logo" src="https://ik.imagekit.io/bigquamsmedia/Logopit_1745061158082.jpg?updatedAt=1755644355596" alt="Big Quams Media Logo" />
+
+    <h1 class="header">Balqeez Agbarigidoma</h1>
+    <p class="sub-header">24th August, 2024</p>
+
+    <img class="image" src="https://ik.imagekit.io/bigquamsmedia/Photoroom-20250819_212943.png?updatedAt=1755641276361" alt="Balqeez"/>
+
+    <div class="message">
+      <p>On your special day, I pray that <strong>Allah (SWT)</strong> blesses you with peace that calms your soul, knowledge that uplifts you, and faith that remains firm.</p>
+
+      <p>You’ve been more than just a friend—you’ve become family in this school journey. I’m truly grateful Allah brought us together under the light of <em>ilm</em>.</p>
+
+      <p>May He guide your steps, ease your burdens, increase your <em>rizq</em>, and write your name among the righteous. May this new age bring you closer to your dreams and to Jannah.</p>
+
+      <p><strong>Ameen.</strong></p>
+
+      <p><strong>Happy Birthday, Balqeez Agbarigidoma. Barakallahu fi umrik.</strong><br/>You are deeply appreciated.</p>
+    </div>
+<p class="footer">— BIG QUAMS MEDIA</p>
+
+    <a href="https://wa.me/message/OVCVEDHU3I2PH1" class="whatsapp-btn" target="_blank" rel="noopener">Contact Us on WhatsApp</a>
+
+    <p class="created">Created by Big Quams Media</p>
+  </div>
+
+  <!-- Background animation for balloons -->
+  <style>
+    .balloon {
+      position: fixed;
+      bottom: -150px;
+      width: 40px;
+      height: 60px;
+      background: linear-gradient(135deg, #ff6fa3, #ff2d95);
+      border-radius: 20px 20px 25px 25px;
+      animation: floatUp 15s linear infinite;
+      opacity: 0.8;
+      filter: drop-shadow(0 0 3px #ff2d95);
+      left: calc(25% * var(--i));
+      z-index: 0;
+    }
+    .balloon:nth-child(1) { --i: 1; animation-delay: 0s; }
+    .balloon:nth-child(2) { --i: 2; animation-delay: 5s; }
+    .balloon:nth-child(3) { --i: 3; animation-delay: 10s; }
+    .balloon:nth-child(4) { --i: 4; animation-delay: 7s; }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-300px) scale(1.1);
+      }
+      100% {
+        transform: translateY(-600px) scale(0.9);
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/10/21/audio_94eae4412e.mp3?filename=happy-birthday-song-6391.mp3" type="audio/mpeg" /> Your browser does not support the audio element.
+  </audio>
+
+</body>
+</html>

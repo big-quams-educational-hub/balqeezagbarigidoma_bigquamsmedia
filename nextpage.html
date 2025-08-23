@@ -1,102 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Surprise from CTRIO FAM</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A Surprise for You 🎉</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #1a237e, #0d47a1);
-      color: #fff;
+      background: linear-gradient(135deg, #fdfbfb, #ebedee);
+      color: #333;
       text-align: center;
       overflow-x: hidden;
-      position: relative;
       min-height: 100vh;
+      position: relative;
     }
 
     /* Balloons */
     @keyframes floatUp {
-      0% { transform: translateY(0) scale(1); opacity: 0.9; }
-      50% { transform: translateY(-300px) scale(1.1); opacity: 1; }
-      100% { transform: translateY(-600px) scale(0.9); opacity: 0; }
+      0% { transform: translateY(100vh) translateX(0) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-150px) translateX(60px) rotate(360deg); opacity: 0; }
     }
     .balloon {
       position: absolute;
-      bottom: -150px;
+      bottom: -120px;
       width: 50px;
       height: 70px;
-      border-radius: 50%;
-      animation: floatUp 15s linear infinite;
-      opacity: 0.85;
-      filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      animation: floatUp linear infinite;
+      opacity: 0.9;
     }
-    .balloon:nth-child(1) { left: 10%; background: #ff4081; animation-delay: 0s; }
-    .balloon:nth-child(2) { left: 30%; background: #ffeb3b; animation-delay: 3s; }
-    .balloon:nth-child(3) { left: 50%; background: #4caf50; animation-delay: 6s; }
-    .balloon:nth-child(4) { left: 70%; background: #29b6f6; animation-delay: 9s; }
-    .balloon:nth-child(5) { left: 90%; background: #ab47bc; animation-delay: 12s; }
+    .balloon:nth-child(1) { left: 15%; background: radial-gradient(circle at 30% 30%, #ff6fa3, #d63384); animation-duration: 8s; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 35%; background: radial-gradient(circle at 30% 30%, #ffcc00, #ff9900); animation-duration: 10s; animation-delay: 2s; }
+    .balloon:nth-child(3) { left: 55%; background: radial-gradient(circle at 30% 30%, #33ccff, #0066ff); animation-duration: 9s; animation-delay: 4s; }
+    .balloon:nth-child(4) { left: 75%; background: radial-gradient(circle at 30% 30%, #66ff99, #00cc66); animation-duration: 11s; animation-delay: 1s; }
+    .balloon:nth-child(5) { left: 90%; background: radial-gradient(circle at 30% 30%, #ff9966, #ff3300); animation-duration: 12s; animation-delay: 3s; }
 
+    /* Confetti */
+    @keyframes confettiFall {
+      0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    }
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      animation: confettiFall linear infinite;
+    }
+    .confetti:nth-child(6) { left: 10%; background: #ffeb3b; animation-duration: 6s; animation-delay: 0s; }
+    .confetti:nth-child(7) { left: 25%; background: #ff4081; animation-duration: 7.5s; animation-delay: 1s; }
+    .confetti:nth-child(8) { left: 40%; background: #69f0ae; animation-duration: 5.5s; animation-delay: 2s; }
+    .confetti:nth-child(9) { left: 60%; background: #448aff; animation-duration: 8.5s; animation-delay: 0.5s; }
+    .confetti:nth-child(10) { left: 80%; background: #ff5722; animation-duration: 6.5s; animation-delay: 1.5s; }
+
+    /* Container */
     .container {
-      padding: 30px 20px 80px;
-      max-width: 850px;
+      padding: 30px 20px;
+      max-width: 800px;
       margin: auto;
       position: relative;
       z-index: 10;
-      background: rgba(255, 255, 255, 0.15);
+      background: #fff;
       border-radius: 20px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
       margin-top: 30px;
+      border: 3px solid transparent;
+      animation: glowBorder 5s infinite alternate;
+    }
+    @keyframes glowBorder {
+      0% { border-color: #ff6fa3; box-shadow: 0 0 15px #ff6fa3; }
+      33% { border-color: #ffcc00; box-shadow: 0 0 15px #ffcc00; }
+      66% { border-color: #33ccff; box-shadow: 0 0 15px #33ccff; }
+      100% { border-color: #66ff99; box-shadow: 0 0 15px #66ff99; }
     }
 
+    /* Shimmer Title */
     .header {
-      font-size: 2.3em;
-      color: #ffeb3b;
-      margin-bottom: 20px;
+      font-size: 2.2em;
       font-weight: 700;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #ff6fa3, #ffcc00, #33ccff, #66ff99, #ff6fa3);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: shimmer 6s linear infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     .message {
       font-size: 1.1em;
       line-height: 1.8;
       margin: 20px 0;
-      color: #fff;
+      font-weight: 500;
+      color: #444;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-style: italic;
+      font-size: 0.95em;
+      color: #333;
       font-weight: 500;
     }
 
-    .btn {
+    .back-btn {
       display: inline-block;
-      background: #ff4081;
-      color: #fff;
       padding: 12px 25px;
       border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
-      margin: 15px 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      transition: background 0.3s ease;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #33ccff, #0066ff);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 102, 255, 0.4);
+      transition: all 0.3s ease;
     }
-    .btn:hover {
-      background: #f50057;
+    .back-btn:hover {
+      background: linear-gradient(135deg, #66d9ff, #3399ff);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 102, 255, 0.6);
     }
 
-    /* Footer */
-    .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      text-align: center;
-      font-size: 0.9em;
-      color: #eee;
-      padding: 10px 0;
-      background: rgba(0,0,0,0.25);
-      font-style: italic;
+    /* Fixed footer */
+    .created {
+      font-size: 0.85em;
+      color: rgba(0,0,0,0.5);
       font-weight: 500;
-      z-index: 50;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 20;
+    }
+    .created:hover { color: rgba(0,0,0,0.8); }
+    .created img { width: 16px; height: 16px; }
+
+    @media (max-width: 600px) {
+      .header { font-size: 1.8em; }
+      .message { font-size: 1em; }
     }
   </style>
 </head>
@@ -108,32 +159,36 @@
   <div class="balloon"></div>
   <div class="balloon"></div>
 
+  <!-- Confetti -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+
   <div class="container">
-    <h1 class="header">A Special Surprise 🎉</h1>
-
+    <h1 class="header">💌 From CTRIO FAM to You</h1>
     <div class="message">
-      <p>Balqeez, words can hardly capture how grateful we are to have you in our circle. In this journey of campus life, friends come and go — but family is rare. And truly, you’ve become <strong>family</strong> to us.</p>
-
-      <p>It feels amazing to share moments, laughter, and growth with someone as inspiring as you. From <strong>Agbarigidoma compound, Ilorin, Kwara</strong> all the way down to campus, your presence shines brightly. And let’s not forget... <em>even Sudan is proud of you (yes, we’re joking 😅)</em>.</p>
-
-      <p>You are a gem, a queen, and a blessing — and today, CTRIO FAM just wants you to know how glad we are that Allah crossed our paths. May this bond remain strong and filled with joy, support, and love always. 💕</p>
-
-      <p><strong>Happy Birthday once again, Balqeez! You’re loved more than words can say. 🥳</strong></p>
+      <p>Balqeez, having you as a family friend on campus has been nothing short of a blessing. From the very first day, you’ve carried yourself with grace, kindness, and strength, reminding us that true friendships are treasures.</p>
+      <p>We are so glad Allah made our paths cross with a <strong>Queen from Agbarigidoma compound, Ilorin, Kwara State</strong> — and somehow, you even brought a touch of Sudan into the mix (don’t worry, we’ll keep teasing you about that one 😂).</p>
+      <p>May this bond continue to grow, may our smiles never fade, and may your new age be filled with success, joy, and endless reasons to celebrate.</p>
+      <p><strong>We are proud to call you our friend, our sister, and our family.</strong></p>
     </div>
 
-    <!-- Tap to play music -->
-    <audio id="birthdayMusic">
-      <source src="https://cdn.pixabay.com/download/audio/2021/10/21/audio_94eae4412e.mp3?filename=happy-birthday-song-6391.mp3" type="audio/mpeg">
-    </audio>
-    <a href="#" class="btn" onclick="document.getElementById('birthdayMusic').play(); this.style.display='none';">🎶 Tap to Play Music</a>
+    <p class="footer">— With ❤️ from CTRIO FAM</p>
 
-    <!-- Back button -->
-    <a href="index.html" class="btn">⬅️ Back</a>
+    <a href="index.html" class="back-btn">⬅ Back to Birthday Page</a>
   </div>
 
-  <!-- Footer -->
-  <div class="footer">
-    — With ❤️ from CTRIO FAM —
-  </div>
+  <!-- Fixed Watermark -->
+  <a href="https://wa.me/message/OVCVEDHU3I2PH1" class="created" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/> Built with ❤️ by Big Quams Media
+  </a>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2021/10/21/audio_94eae4412e.mp3?filename=happy-birthday-song-6391.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
 </body>
 </html>

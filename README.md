@@ -31,7 +31,7 @@ Built with ❤️ by **CTRIO FAM**.
 ## 🚀 How to Use
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-username/birthday-project.git
+   git clone https://github.com/big-quams-educational-hub/balqeezagbarigidoma_bigquamsmedia
 ````
 
 2. Open `index.html` in your browser.
@@ -42,7 +42,7 @@ Built with ❤️ by **CTRIO FAM**.
 
 ## 🌍 Live Demo
 
-👉 [View the Website Here](https://your-username.github.io/birthday-project/)
+👉 [View the Website Here](https://big-quams-educational-hub/balqeezagbarigidoma_bigquamsmedia)
 
 ---
 

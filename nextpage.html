@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Surprise from CTRIO FAM</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a237e, #0d47a1);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Balloons */
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.9; }
+      50% { transform: translateY(-300px) scale(1.1); opacity: 1; }
+      100% { transform: translateY(-600px) scale(0.9); opacity: 0; }
+    }
+    .balloon {
+      position: absolute;
+      bottom: -150px;
+      width: 50px;
+      height: 70px;
+      border-radius: 50%;
+      animation: floatUp 15s linear infinite;
+      opacity: 0.85;
+      filter: drop-shadow(0 0 3px rgba(0,0,0,0.3));
+    }
+    .balloon:nth-child(1) { left: 10%; background: #ff4081; animation-delay: 0s; }
+    .balloon:nth-child(2) { left: 30%; background: #ffeb3b; animation-delay: 3s; }
+    .balloon:nth-child(3) { left: 50%; background: #4caf50; animation-delay: 6s; }
+    .balloon:nth-child(4) { left: 70%; background: #29b6f6; animation-delay: 9s; }
+    .balloon:nth-child(5) { left: 90%; background: #ab47bc; animation-delay: 12s; }
+
+    .container {
+      padding: 30px 20px 80px;
+      max-width: 850px;
+      margin: auto;
+      position: relative;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      margin-top: 30px;
+    }
+
+    .header {
+      font-size: 2.3em;
+      color: #ffeb3b;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .message {
+      font-size: 1.1em;
+      line-height: 1.8;
+      margin: 20px 0;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff4081;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 15px 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #f50057;
+    }
+
+    /* Footer */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 0.9em;
+      color: #eee;
+      padding: 10px 0;
+      background: rgba(0,0,0,0.25);
+      font-style: italic;
+      font-weight: 500;
+      z-index: 50;
+    }
+  </style>
+</head>
+<body>
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+
+  <div class="container">
+    <h1 class="header">A Special Surprise 🎉</h1>
+
+    <div class="message">
+      <p>Balqeez, words can hardly capture how grateful we are to have you in our circle. In this journey of campus life, friends come and go — but family is rare. And truly, you’ve become <strong>family</strong> to us.</p>
+
+      <p>It feels amazing to share moments, laughter, and growth with someone as inspiring as you. From <strong>Agbarigidoma compound, Ilorin, Kwara</strong> all the way down to campus, your presence shines brightly. And let’s not forget... <em>even Sudan is proud of you (yes, we’re joking 😅)</em>.</p>
+
+      <p>You are a gem, a queen, and a blessing — and today, CTRIO FAM just wants you to know how glad we are that Allah crossed our paths. May this bond remain strong and filled with joy, support, and love always. 💕</p>
+
+      <p><strong>Happy Birthday once again, Balqeez! You’re loved more than words can say. 🥳</strong></p>
+    </div>
+
+    <!-- Tap to play music -->
+    <audio id="birthdayMusic">
+      <source src="https://cdn.pixabay.com/download/audio/2021/10/21/audio_94eae4412e.mp3?filename=happy-birthday-song-6391.mp3" type="audio/mpeg">
+    </audio>
+    <a href="#" class="btn" onclick="document.getElementById('birthdayMusic').play(); this.style.display='none';">🎶 Tap to Play Music</a>
+
+    <!-- Back button -->
+    <a href="index.html" class="btn">⬅️ Back</a>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    — With ❤️ from CTRIO FAM —
+  </div>
+</body>
+</html>
